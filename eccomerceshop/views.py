@@ -6,5 +6,5 @@ def home(request):
     products = Products.objects.all().filter(is_availiable=True)
     products_count = products.count()
 
-    context = {'products':products, "products_count":products_count}
+    context = {'products': products, "products_count": products_count}
     return render(request, "home.html", context)

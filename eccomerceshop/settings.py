@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'accounts',
     'store',
     'cart',
+    'orders',
+
 ]
 
 MIDDLEWARE = [
@@ -136,3 +138,22 @@ MEDIA_ROOT = BASE_DIR /'media'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#my settings
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+messages.ERROR :'danger',
+}
+
+# SMPT CONFIGURATION
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'faizanmasoodkhattak12@gmail.com'
+EMAIL_HOST_PASSWORD = 'hfldhkfptxwrhlcy'
+EMAIL_USE_TLS = True
+# STARTTLS
+
+# paypal settings
+# PAYPAL_RECIEVER_EMAIL = 'faizanmasoodkhattak5@gmail.com'
+# PAYPAL_TEST = True
